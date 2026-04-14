@@ -1,6 +1,6 @@
 {
   "name": "cleanarr",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Jellyfin → Radarr/Sonarr deletion bridge. Delete a movie or episode in Jellyfin; it's unmonitored and removed from the *arr stack automatically.",
   "license": "MIT",
   "private": true,
