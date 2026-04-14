@@ -1,0 +1,24 @@
+---
+services:
+  cleanarr:
+    image: ghcr.io/rvanbaalen/cleanarr:latest
+    container_name: cleanarr
+    environment:
+      - TZ=America/Curacao
+      - PORT=3000
+      - RADARR_URL=http://host.docker.internal:7878
+      - RADARR_API_KEY=${RADARR_API_KEY}
+      - SONARR_URL=http://host.docker.internal:8989
+      - SONARR_API_KEY=${SONARR_API_KEY}
+      - WEBHOOK_SECRET=${WEBHOOK_SECRET}
+      - DRY_RUN=${DRY_RUN:-true}
+      - SEASON_DEBOUNCE_MS=10000
+      - EVENTS_RETENTION_DAYS=30
+      - LOG_LEVEL=info
+    volumes:
+      - ./data:/app/data
+    ports:
+      - 3000:3000
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
