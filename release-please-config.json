@@ -4,11 +4,13 @@
     ".": {
       "release-type": "node",
       "package-name": "cleanarr",
+      "initial-version": "0.1.0",
       "bump-minor-pre-major": true,
       "bump-patch-for-minor-pre-major": true,
       "draft": false,
       "prerelease": false,
       "include-v-in-tag": true,
+      "include-component-in-tag": false,
       "changelog-sections": [
         { "type": "feat", "section": "Features" },
         { "type": "fix", "section": "Bug Fixes" },
